@@ -1,0 +1,92 @@
+<div class="container">
+
+  <p>
+    <strong>User:</strong>
+    <%= @mi_propiedad.user %>
+  </p>
+
+  <p>
+    <strong>Estado:</strong>
+    <%= @mi_propiedad.estado %>
+  </p>
+
+  <p>
+    <strong>Municipio:</strong>
+    <%= @mi_propiedad.municipio %>
+  </p>
+
+  <p>
+    <strong>Colonia:</strong>
+    <%= @mi_propiedad.colonia %>
+  </p>
+
+  <p>
+    <strong>Calle:</strong>
+    <%= @mi_propiedad.calle %>
+  </p>
+
+  <p>
+    <strong>Numero:</strong>
+    <%= @mi_propiedad.numero %>
+  </p>
+
+  <p>
+    <strong>Tipo de propiedad:</strong>
+    <%= @mi_propiedad.tipo_de_propiedad %>
+  </p>
+
+  <p>
+    <strong>M2terreno:</strong>
+    <%= @mi_propiedad.m2terreno %>
+  </p>
+
+  <p>
+    <strong>M2construccion:</strong>
+    <%= @mi_propiedad.m2construccion %>
+  </p>
+
+  <p>
+    <strong>Baños:</strong>
+    <%= @mi_propiedad.baños %>
+  </p>
+
+  <p>
+    <strong>Habitaciones:</strong>
+    <%= @mi_propiedad.habitaciones %>
+  </p>
+
+  <p>
+    <strong>Entorno:</strong>
+    <%= @mi_propiedad.entorno %>
+  </p>
+
+  <p>
+    <strong>Condiciones de la propiedad:</strong>
+    <%= @mi_propiedad.condiciones_de_la_propiedad %>
+  </p>
+
+  <p>
+    <strong>Precio al que adquiri:</strong>
+    <%= @mi_propiedad.precio_al_que_adquiri %>
+  </p>
+
+  <p>
+    <strong>Año al que adquiri:</strong>
+    <%= @mi_propiedad.año_al_que_adquiri %>
+  </p>
+
+  <p>
+    <strong>En venta:</strong>
+    <%= @mi_propiedad.en_venta %>
+  </p>
+
+  <p>
+    <strong>Plazo de venta:</strong>
+    <%= @mi_propiedad.plazo_de_venta %>
+  </p>
+
+  <% if @mi_propiedad.user == current_user %>
+    <%= link_to 'Edit', edit_mi_propiedad_path(@mi_propiedad) %> |
+  <% end %>
+  <%= link_to 'Back', mi_propiedads_path %>
+</div>

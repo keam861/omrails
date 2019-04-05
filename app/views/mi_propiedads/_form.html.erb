@@ -1,0 +1,96 @@
+<%= form_with(model: mi_propiedad, local: true) do |form| %>
+  <% if mi_propiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mi_propiedad.errors.count, "error") %> prohibited this mi_propiedad from being saved:</h2>
+
+      <ul>
+      <% mi_propiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form-group">
+    <%= form.label :estado %>
+    <%= form.text_field :estado, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :municipio %>
+    <%= form.text_field :municipio, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :colonia %>
+    <%= form.text_field :colonia, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :calle %>
+    <%= form.text_field :calle, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :numero %>
+    <%= form.number_field :numero, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tipo_de_propiedad %>
+    <%= form.text_field :tipo_de_propiedad, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :m2terreno %>
+    <%= form.number_field :m2terreno, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :m2construccion %>
+    <%= form.number_field :m2construccion, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :baños %>
+    <%= form.number_field :baños, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :habitaciones %>
+    <%= form.number_field :habitaciones, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :entorno %>
+    <%= form.text_field :entorno, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :condiciones_de_la_propiedad %>
+    <%= form.text_field :condiciones_de_la_propiedad, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :precio_al_que_adquiri %>
+    <%= form.number_field :precio_al_que_adquiri, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :año_al_que_adquiri %>
+    <%= form.number_field :año_al_que_adquiri, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :en_venta %>
+    <%= form.check_box :en_venta, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :plazo_de_venta %>
+    <%= form.text_field :plazo_de_venta, class: "form-control" %>
+  </div>
+
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+
+<% end %>

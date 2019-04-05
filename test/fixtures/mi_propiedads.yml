@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  estado: MyString
+  municipio: MyString
+  colonia: MyString
+  calle: MyString
+  numero: 1
+  tipo_de_propiedad: MyString
+  m2terreno: 1
+  m2construccion: 1
+  baños: 1
+  habitaciones: 1
+  entorno: MyString
+  condiciones_de_la_propiedad: MyString
+  precio_al_que_adquiri: 1
+  año_al_que_adquiri: 1
+  en_venta: false
+  plazo_de_venta: MyString
+
+two:
+  user: two
+  estado: MyString
+  municipio: MyString
+  colonia: MyString
+  calle: MyString
+  numero: 1
+  tipo_de_propiedad: MyString
+  m2terreno: 1
+  m2construccion: 1
+  baños: 1
+  habitaciones: 1
+  entorno: MyString
+  condiciones_de_la_propiedad: MyString
+  precio_al_que_adquiri: 1
+  año_al_que_adquiri: 1
+  en_venta: false
+  plazo_de_venta: MyString

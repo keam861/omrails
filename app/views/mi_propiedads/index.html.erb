@@ -1,0 +1,64 @@
+<div class="container">
+
+  <h1>Mi Propiedad</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Estado</th>
+        <th>Municipio</th>
+        <th>Colonia</th>
+        <th>Calle</th>
+        <th>Numero</th>
+        <th>Tipo de propiedad</th>
+        <th>M2terreno</th>
+        <th>M2construccion</th>
+        <th>Baños</th>
+        <th>Habitaciones</th>
+        <th>Entorno</th>
+        <th>Condiciones de la propiedad</th>
+        <th>Precio al que adquiri</th>
+        <th>Año al que adquiri</th>
+        <th>En venta</th>
+        <th>Plazo de venta</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @mi_propiedads.each do |mi_propiedad| %>
+        <tr>
+          <td><%= mi_propiedad.user.email %></td>
+          <td><%= mi_propiedad.estado %></td>
+          <td><%= mi_propiedad.municipio %></td>
+          <td><%= mi_propiedad.colonia %></td>
+          <td><%= mi_propiedad.calle %></td>
+          <td><%= mi_propiedad.numero %></td>
+          <td><%= mi_propiedad.tipo_de_propiedad %></td>
+          <td><%= mi_propiedad.m2terreno %></td>
+          <td><%= mi_propiedad.m2construccion %></td>
+          <td><%= mi_propiedad.baños %></td>
+          <td><%= mi_propiedad.habitaciones %></td>
+          <td><%= mi_propiedad.entorno %></td>
+          <td><%= mi_propiedad.condiciones_de_la_propiedad %></td>
+          <td><%= mi_propiedad.precio_al_que_adquiri %></td>
+          <td><%= mi_propiedad.año_al_que_adquiri %></td>
+          <td><%= mi_propiedad.en_venta %></td>
+          <td><%= mi_propiedad.plazo_de_venta %></td>
+          <% if mi_propiedad.user == current_user %>
+            <td><%= link_to 'Show', mi_propiedad %></td>
+            <td><%= link_to 'Edit', edit_mi_propiedad_path(mi_propiedad) %></td>
+            <td><%= link_to 'Destroy', mi_propiedad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <% if user_signed_in? %>
+    <%= link_to 'New Mi Propiedad',
+    new_mi_propiedad_path %>
+  <% end %>
+</div>
