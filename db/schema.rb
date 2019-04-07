@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_05_120554) do
+ActiveRecord::Schema.define(version: 2019_04_06_005608) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -47,6 +47,24 @@ ActiveRecord::Schema.define(version: 2019_04_05_120554) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_mi_propiedads_on_user_id"
+  end
+
+  create_table "reporte_mi_propiedads", force: :cascade do |t|
+    t.integer "mi_propiedad_id"
+    t.string "tipo_de_demanda"
+    t.integer "años_de_analisis"
+    t.integer "plusvalia_historica"
+    t.integer "proyeccion_plusvalia"
+    t.integer "años_de_proyeccion"
+    t.integer "plusvalia_colonia"
+    t.integer "plusvalia_municipio"
+    t.integer "plusvalia_estatal"
+    t.integer "precio_midprice"
+    t.integer "precio_bidlow"
+    t.integer "precio_askhigh"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mi_propiedad_id"], name: "index_reporte_mi_propiedads_on_mi_propiedad_id"
   end
 
   create_table "tweets", force: :cascade do |t|

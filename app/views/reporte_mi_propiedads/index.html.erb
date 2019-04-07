@@ -1,0 +1,49 @@
+<div class="container">
+
+  <h1>Reporte Mi Propiedad</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Mi propiedad</th>
+        <th>Tipo de demanda</th>
+        <th>Años de analisis</th>
+        <th>Plusvalia historica</th>
+        <th>Proyeccion plusvalia</th>
+        <th>Años de proyeccion</th>
+        <th>Plusvalia colonia</th>
+        <th>Plusvalia municipio</th>
+        <th>Plusvalia estatal</th>
+        <th>Precio midprice</th>
+        <th>Precio bidlow</th>
+        <th>Precio askhigh</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @reporte_mi_propiedads.each do |reporte_mi_propiedad| %>
+        <tr>
+          <td><%= reporte_mi_propiedad.mi_propiedad.calle %></td>
+          <td><%= reporte_mi_propiedad.tipo_de_demanda %></td>
+          <td><%= reporte_mi_propiedad.años_de_analisis %></td>
+          <td><%= reporte_mi_propiedad.plusvalia_historica %></td>
+          <td><%= reporte_mi_propiedad.proyeccion_plusvalia %></td>
+          <td><%= reporte_mi_propiedad.años_de_proyeccion %></td>
+          <td><%= reporte_mi_propiedad.plusvalia_colonia %></td>
+          <td><%= reporte_mi_propiedad.plusvalia_municipio %></td>
+          <td><%= reporte_mi_propiedad.plusvalia_estatal %></td>
+          <td><%= reporte_mi_propiedad.precio_midprice %></td>
+          <td><%= reporte_mi_propiedad.precio_bidlow %></td>
+          <td><%= reporte_mi_propiedad.precio_askhigh %></td>
+          <td><%= link_to 'Show', reporte_mi_propiedad %></td>
+          <td><%= link_to 'Edit', edit_reporte_mi_propiedad_path(reporte_mi_propiedad) %></td>
+          <td><%= link_to 'Destroy', reporte_mi_propiedad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+</div>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reporte_mi_propiedads
   resources :mi_propiedads
   resources :tweets
   ActiveAdmin.routes(self)

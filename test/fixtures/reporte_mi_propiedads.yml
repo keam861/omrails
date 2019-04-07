@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mi_propiedad: one
+  tipo_de_demanda: MyString
+  años_de_analisis: 1
+  plusvalia_historica: 1
+  proyeccion_plusvalia: 1
+  años_de_proyeccion: 1
+  plusvalia_colonia: 1
+  plusvalia_municipio: 1
+  plusvalia_estatal: 1
+  precio_midprice: 1
+  precio_bidlow: 1
+  precio_askhigh: 1
+
+two:
+  mi_propiedad: two
+  tipo_de_demanda: MyString
+  años_de_analisis: 1
+  plusvalia_historica: 1
+  proyeccion_plusvalia: 1
+  años_de_proyeccion: 1
+  plusvalia_colonia: 1
+  plusvalia_municipio: 1
+  plusvalia_estatal: 1
+  precio_midprice: 1
+  precio_bidlow: 1
+  precio_askhigh: 1

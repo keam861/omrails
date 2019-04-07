@@ -1,4 +1,4 @@
-ActiveAdmin.register MiPropiedad do
+ActiveAdmin.register ReporteMiPropiedad do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -12,6 +12,9 @@ ActiveAdmin.register MiPropiedad do
 #   permitted
 # end
 
-	permit_params :estado, :colonia, :calle, :numero, :tipo_de_propiedad, :m2terreno, :m2construccion, :habitaciones, :entorno, :condiciones_de_la_propiedad, :precio_al_que_adquiri, :año_al_que_adquiri, :en_venta, :plazo_de_venta  
+permit_params :tipo_de_demanda, :años_de_analisis, :plusvalia_historica, :proyeccion_plusvalia, :años_de_proyeccion, :plusvalia_colonia, :plusvalia_municipio, :plusvalia_estatal, :precio_midprice, :precio_bidlow, :precio_askhigh
 
 end
+
+
+    

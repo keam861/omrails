@@ -1,0 +1,76 @@
+<%= form_with(model: reporte_mi_propiedad, local: true) do |form| %>
+  <% if reporte_mi_propiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reporte_mi_propiedad.errors.count, "error") %> prohibited this reporte_mi_propiedad from being saved:</h2>
+
+      <ul>
+      <% reporte_mi_propiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :mi_propiedad_id %>
+    <%= form.text_field :mi_propiedad_id, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tipo_de_demanda %>
+    <%= form.text_field :tipo_de_demanda, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :años_de_analisis %>
+    <%= form.number_field :años_de_analisis, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :plusvalia_historica %>
+    <%= form.number_field :plusvalia_historica, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :proyeccion_plusvalia %>
+    <%= form.number_field :proyeccion_plusvalia, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :años_de_proyeccion %>
+    <%= form.number_field :años_de_proyeccion, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :plusvalia_colonia %>
+    <%= form.number_field :plusvalia_colonia, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :plusvalia_municipio %>
+    <%= form.number_field :plusvalia_municipio, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :plusvalia_estatal %>
+    <%= form.number_field :plusvalia_estatal, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :precio_midprice %>
+    <%= form.number_field :precio_midprice, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :precio_bidlow %>
+    <%= form.number_field :precio_bidlow, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :precio_askhigh %>
+    <%= form.number_field :precio_askhigh, class: "form-control" %>
+  </div>
+
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+    
+<% end %>
