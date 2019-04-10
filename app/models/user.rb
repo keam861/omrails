@@ -7,5 +7,6 @@ class User < ApplicationRecord
   has_many :tweets
 
   has_many :mi_propiedads
+  has_many :casas
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_005608) do
+ActiveRecord::Schema.define(version: 2019_04_09_062635) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -24,6 +24,25 @@ ActiveRecord::Schema.define(version: 2019_04_06_005608) do
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
     t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  end
+
+  create_table "casas", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "estado"
+    t.string "municipio"
+    t.string "colonia"
+    t.string "calle"
+    t.string "tipo_de_propiedad"
+    t.integer "m2terreno"
+    t.integer "m2construccion"
+    t.integer "baños"
+    t.integer "habitaciones"
+    t.string "entorno"
+    t.integer "precioask"
+    t.boolean "inmobiliaria"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_casas_on_user_id"
   end
 
   create_table "mi_propiedads", force: :cascade do |t|

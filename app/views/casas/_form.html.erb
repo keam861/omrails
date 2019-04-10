@@ -1,0 +1,75 @@
+<%= form_with(model: casa, local: true) do |form| %>
+  <% if casa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(casa.errors.count, "error") %> prohibited this casa from being saved:</h2>
+
+      <ul>
+      <% casa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :estado %>
+    <%= form.text_field :estado, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :municipio %>
+    <%= form.text_field :municipio, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :colonia %>
+    <%= form.text_field :colonia, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :calle %>
+    <%= form.text_field :calle, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_de_propiedad %>
+    <%= form.text_field :tipo_de_propiedad, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :m2terreno %>
+    <%= form.number_field :m2terreno, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :m2construccion %>
+    <%= form.number_field :m2construccion, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :baños %>
+    <%= form.number_field :baños, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :habitaciones %>
+    <%= form.number_field :habitaciones, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :entorno %>
+    <%= form.text_field :entorno, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :precioask %>
+    <%= form.number_field :precioask, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :inmobiliaria %>
+    <%= form.check_box :inmobiliaria, class: "form-control"  %>
+  </div>
+
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+<% end %>

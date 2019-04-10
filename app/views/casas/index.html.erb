@@ -1,0 +1,51 @@
+<div class="container" > 
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card text-center">
+        <div class="card-header">Casas
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Reporte de la Propiedad</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <p><%= current_user.email %></p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">2 days ago
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+        <% @casas.each do |casa| %>
+          <div class="card mb-3">
+            <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Casa</h5>
+                  <p class="card-text">
+                    <%= casa.estado %>
+                    <%= casa.municipio %>
+                    <%= casa.colonia %>
+                    <%= casa.calle %>
+                    <%= casa.tipo_de_propiedad %>
+                    <%= casa.m2terreno %> Mt2
+                    <%= casa.m2construccion %> Mt2
+                    <%= casa.baños %>
+                    <%= casa.habitaciones %>
+                    <%= casa.entorno %>
+                    <%= casa.precioask %>
+                    <%= casa.inmobiliaria %>
+                  </p>
+                  <% if casa.user == current_user %>
+                    <%= link_to 'Show', casa %>
+                    <td><%= link_to 'Edit', edit_casa_path(casa) %></td>
+                    <td><%= link_to 'Destroy', casa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <% end %>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>  
+          </div>
+        <% end %>
+        <% if user_signed_in? %>
+        <%= link_to 'Agregar nueva Casa', new_casa_path %>
+        <% end %>
+    </div>
+  </div>
+</div>

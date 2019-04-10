@@ -1,64 +1,54 @@
 <div class="container">
-
-  <h1>Mi Propiedad</h1>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th>User</th>
-        <th>Estado</th>
-        <th>Municipio</th>
-        <th>Colonia</th>
-        <th>Calle</th>
-        <th>Numero</th>
-        <th>Tipo de propiedad</th>
-        <th>M2terreno</th>
-        <th>M2construccion</th>
-        <th>Baños</th>
-        <th>Habitaciones</th>
-        <th>Entorno</th>
-        <th>Condiciones de la propiedad</th>
-        <th>Precio al que adquiri</th>
-        <th>Año al que adquiri</th>
-        <th>En venta</th>
-        <th>Plazo de venta</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card text-center">
+        <div class="card-header">Nuevo Reporte
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Reporte de tu Propiedad</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <p><%= current_user.email %></p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">2 days ago
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
       <% @mi_propiedads.each do |mi_propiedad| %>
-        <tr>
-          <td><%= mi_propiedad.user.email %></td>
-          <td><%= mi_propiedad.estado %></td>
-          <td><%= mi_propiedad.municipio %></td>
-          <td><%= mi_propiedad.colonia %></td>
-          <td><%= mi_propiedad.calle %></td>
-          <td><%= mi_propiedad.numero %></td>
-          <td><%= mi_propiedad.tipo_de_propiedad %></td>
-          <td><%= mi_propiedad.m2terreno %></td>
-          <td><%= mi_propiedad.m2construccion %></td>
-          <td><%= mi_propiedad.baños %></td>
-          <td><%= mi_propiedad.habitaciones %></td>
-          <td><%= mi_propiedad.entorno %></td>
-          <td><%= mi_propiedad.condiciones_de_la_propiedad %></td>
-          <td><%= mi_propiedad.precio_al_que_adquiri %></td>
-          <td><%= mi_propiedad.año_al_que_adquiri %></td>
-          <td><%= mi_propiedad.en_venta %></td>
-          <td><%= mi_propiedad.plazo_de_venta %></td>
-          <% if mi_propiedad.user == current_user %>
-            <td><%= link_to 'Show', mi_propiedad %></td>
-            <td><%= link_to 'Edit', edit_mi_propiedad_path(mi_propiedad) %></td>
-            <td><%= link_to 'Destroy', mi_propiedad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        </tr>
+        <div class="card mb-3">
+          <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Propiedad</h5>
+                <p class="card-text">
+                  <%= mi_propiedad.calle %>
+                  <%= mi_propiedad.numero %>,
+                  <%= mi_propiedad.colonia %>,
+                  <%= mi_propiedad.municipio %>
+                  <%= mi_propiedad.estado %></p>
+                  <p><%= mi_propiedad.m2terreno %> mt2
+                  <%= mi_propiedad.m2construccion %> mt2
+                  </p>
+                  <% if mi_propiedad.user == current_user %>
+                    <td><%= link_to 'Ver Ficha Tecnica', mi_propiedad %> / </td>
+                    <td><%= link_to 'Editar', edit_mi_propiedad_path(mi_propiedad) %></td> /
+                    <td><%= link_to 'Eliminar', mi_propiedad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <% end %>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <% if user_signed_in? %>
+          <center><%= link_to 'New Mi Propiedad', new_mi_propiedad_path %></center>
+        <% end %>
       <% end %>
-    </tbody>
-  </table>
-
-  <br>
-  <% if user_signed_in? %>
-    <%= link_to 'New Mi Propiedad',
-    new_mi_propiedad_path %>
-  <% end %>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+

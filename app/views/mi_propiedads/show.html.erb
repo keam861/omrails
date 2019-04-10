@@ -1,92 +1,65 @@
 <div class="container">
 
-  <p>
-    <strong>User:</strong>
-    <%= @mi_propiedad.user %>
-  </p>
 
-  <p>
-    <strong>Estado:</strong>
-    <%= @mi_propiedad.estado %>
-  </p>
+  <h1>Mi Propiedad</h1>
 
-  <p>
-    <strong>Municipio:</strong>
-    <%= @mi_propiedad.municipio %>
-  </p>
+    <table class="table">
+      <thead>
+       <tr>
+        <th>User</th>
+        <th>Estado</th>
+        <th>Municipio</th>
+        <th>Colonia</th>
+        <th>Calle</th>
+        <th>Numero</th>
+        <th>Tipo de propiedad</th>
+        <th>M2terreno</th>
+        <th>M2construccion</th>
+        <th>Baños</th>
+        <th>Habitaciones</th>
+        <th>Entorno</th>
+        <th>Condiciones de la propiedad</th>
+        <th>Precio al que adquiri</th>
+        <th>Año al que adquiri</th>
+        <th>En venta</th>
+        <th>Plazo de venta</th>
+        <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <p>
-    <strong>Colonia:</strong>
-    <%= @mi_propiedad.colonia %>
-  </p>
+      <tbody>
+        <tr>
+          <td><%= @mi_propiedad.user.email %></td>
+          <td><%= @mi_propiedad.estado %></td>
+          <td><%= @mi_propiedad.municipio %></td>
+          <td><%= @mi_propiedad.colonia %></td>
+          <td><%= @mi_propiedad.calle %></td>
+          <td><%= @mi_propiedad.numero %></td>
+          <td><%= @mi_propiedad.tipo_de_propiedad %></td>
+          <td><%= @mi_propiedad.m2terreno %></td>
+          <td><%= @mi_propiedad.m2construccion %></td>
+          <td><%= @mi_propiedad.baños %></td>
+          <td><%= @mi_propiedad.habitaciones %></td>
+          <td><%= @mi_propiedad.entorno %></td>
+          <td><%= @mi_propiedad.condiciones_de_la_propiedad %></td>
+          <td><%= @mi_propiedad.precio_al_que_adquiri %></td>
+          <td><%= @mi_propiedad.año_al_que_adquiri %></td>
+          <td><%= @mi_propiedad.en_venta %></td>
+          <td><%= @mi_propiedad.plazo_de_venta %></td>
+       </tr>
+      </tbody>
+  </table>
 
-  <p>
-    <strong>Calle:</strong>
-    <%= @mi_propiedad.calle %>
-  </p>
-
-  <p>
-    <strong>Numero:</strong>
-    <%= @mi_propiedad.numero %>
-  </p>
-
-  <p>
-    <strong>Tipo de propiedad:</strong>
-    <%= @mi_propiedad.tipo_de_propiedad %>
-  </p>
-
-  <p>
-    <strong>M2terreno:</strong>
-    <%= @mi_propiedad.m2terreno %>
-  </p>
-
-  <p>
-    <strong>M2construccion:</strong>
-    <%= @mi_propiedad.m2construccion %>
-  </p>
-
-  <p>
-    <strong>Baños:</strong>
-    <%= @mi_propiedad.baños %>
-  </p>
-
-  <p>
-    <strong>Habitaciones:</strong>
-    <%= @mi_propiedad.habitaciones %>
-  </p>
-
-  <p>
-    <strong>Entorno:</strong>
-    <%= @mi_propiedad.entorno %>
-  </p>
-
-  <p>
-    <strong>Condiciones de la propiedad:</strong>
-    <%= @mi_propiedad.condiciones_de_la_propiedad %>
-  </p>
-
-  <p>
-    <strong>Precio al que adquiri:</strong>
-    <%= @mi_propiedad.precio_al_que_adquiri %>
-  </p>
-
-  <p>
-    <strong>Año al que adquiri:</strong>
-    <%= @mi_propiedad.año_al_que_adquiri %>
-  </p>
-
-  <p>
-    <strong>En venta:</strong>
-    <%= @mi_propiedad.en_venta %>
-  </p>
-
-  <p>
-    <strong>Plazo de venta:</strong>
-    <%= @mi_propiedad.plazo_de_venta %>
-  </p>
-
-  <% if @mi_propiedad.user == current_user %>
-    <%= link_to 'Edit', edit_mi_propiedad_path(@mi_propiedad) %> |
-  <% end %>
-  <%= link_to 'Back', mi_propiedads_path %>
+        <br>
+         <% if @mi_propiedad.user == current_user %>
+          <%= link_to 'Edit', edit_mi_propiedad_path(@mi_propiedad) %> |
+        <% end %>
+      <%= link_to 'Back', mi_propiedads_path %>
+    </div>
+  </div>
 </div>
+
+
+
+
+

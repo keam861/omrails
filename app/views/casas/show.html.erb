@@ -1,0 +1,98 @@
+<div class="container">
+
+
+    <p>
+      <strong>User:</strong>
+      <%= @casa.user %>
+    </p>
+
+    <% if @casa.estado? %>
+      <p>
+        <strong>Estado:</strong>
+        <%= @casa.estado %>
+      </p>
+    <% end %>
+
+    <% if @casa.municipio? %>
+      <p>
+        <strong>Municipio:</strong>
+        <%= @casa.municipio %>
+      </p>
+    <% end %>
+
+    <% if @casa.colonia? %>
+      <p>
+        <strong>Colonia:</strong>
+        <%= @casa.colonia %>
+      </p>
+    <% end %>
+
+    <% if @casa.calle? %>
+      <p>
+        <strong>Calle:</strong>
+        <%= @casa.calle %>
+      </p>
+    <% end %>
+
+    <% if @casa.tipo_de_propiedad? %>
+      <p>
+        <strong>Tipo de propiedad:</strong>
+        <%= @casa.tipo_de_propiedad %>
+      </p>
+    <% end %>
+
+    <% if @casa.m2terreno? %>
+      <p>
+        <strong>M2terreno:</strong>
+        <%= @casa.m2terreno %>
+      </p>
+    <% end %>
+
+    <% if @casa.m2construccion? %>
+      <p>
+        <strong>M2construccion:</strong>
+        <%= @casa.m2construccion %>
+      </p>
+    <% end %>
+
+
+  <% if @casa.baños? %>
+    <p>
+      <strong>Baños:</strong>
+      <%= @casa.baños %>
+    </p>
+  <% end %>
+
+  <% if @casa.habitaciones? %>
+    <p>
+      <strong>Habitaciones:</strong>
+      <%= @casa.habitaciones %>
+    </p>
+  <% end %>
+
+  <% if @casa.entorno? %>
+    <p>
+      <strong>Entorno:</strong>
+      <%= @casa.entorno %>
+    </p>
+  <% end %>
+
+  <% if @casa.precioask? %>
+    <p>
+      <strong>Precioask:</strong>
+      <%= @casa.precioask %>
+    </p>
+  <% end %>
+
+  <% if @casa.inmobiliaria? %>
+    <p>
+      <strong>Inmobiliaria:</strong>
+      <%= @casa.inmobiliaria %>
+    </p>
+  <% end %>
+
+  <% if @casa.user == current_user %>
+    <%= link_to 'Edit', edit_casa_path(@casa) %> |
+    <%= link_to 'Back', casas_path %>
+  <% end %>
+</div>
