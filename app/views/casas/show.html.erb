@@ -93,6 +93,7 @@
 
   <% if @casa.user == current_user %>
     <%= link_to 'Edit', edit_casa_path(@casa) %> |
-    <%= link_to 'Back', casas_path %>
+    <%= link_to 'Back', casas_path %> |
+    <%= link_to 'Delete', @casa, method: :delete%> 
   <% end %>
 </div>
