@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :mi_propiedads
   has_many :casas
 
+   # validates :username, presence: true, uniqueness: true, length: { minimum: 6 }
+   validates :name, presence: true
 end

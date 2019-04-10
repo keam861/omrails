@@ -6,8 +6,8 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">Reporte de tu Propiedad</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <p><%= current_user.email %></p>
+            <p>Bienvenido <%= current_user.name %></p>
+          <p class="card-text">Aqui puedes consultar tu reporte.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
         <div class="card-footer text-muted">2 days ago
@@ -37,10 +37,10 @@
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
+        <% end %>
         <% if user_signed_in? %>
           <center><%= link_to 'New Mi Propiedad', new_mi_propiedad_path %></center>
         <% end %>
-      <% end %>
     </div>
   </div>
 </div>
