@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/:id', to: 'users#show', as: 'user'
 
+  resources :users, only: :show
   resources :casas
   resources :reporte_mi_propiedads
   resources :mi_propiedads
