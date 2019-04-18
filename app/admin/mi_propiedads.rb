@@ -12,6 +12,6 @@ ActiveAdmin.register MiPropiedad do
 #   permitted
 # end
 
-	permit_params :estado, :colonia, :calle, :numero, :tipo_de_propiedad, :m2terreno, :m2construccion, :habitaciones, :entorno, :condiciones_de_la_propiedad, :precio_al_que_adquiri, :año_al_que_adquiri, :en_venta, :plazo_de_venta  
+	permit_params :estado, :colonia, :calle, :numero, :tipo_de_propiedad, :m2terreno, :m2construccion, :habitaciones, :entorno, :condiciones_de_la_propiedad, :precio_al_que_adquiri, :año_al_que_adquiri, :en_venta, :plazo_de_venta, :image, uploads: [] 
 
 end
